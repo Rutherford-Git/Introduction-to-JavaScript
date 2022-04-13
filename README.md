@@ -26,6 +26,7 @@ Exercises are outlined in the `index.js` file, please read the instructions care
 
 ### Task 1: Set up Project
 
+
 Using VSCode, Codegrade and Command Line:
 
 
