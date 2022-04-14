@@ -209,27 +209,24 @@ Use the game function below to do the following:
 RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors | Or there's a tie
 */
 let compChoice= Math.random()*1 + 0;
-if (compChoice < 0.3){
-  compChoice = "rock";
-}else if (compChoice < 0.6){
-  compChoice = "paper";
-}else if (compChoice < 1 ){
-  compChoice = "scissors";
+if (compChoice <= 0.33){
+   compChoice = "paper";
+}else if (compChoice <= 0.66){
+   compChoice = "scissors";
+}else if (compChoice <= 1 ){
+   compChoice = "rock";
 }
-
-let hand1 = ('rock'|| 'paper'|| 'scissors')
-let hand2 = ('rock'|| 'paper'|| 'scissors')
+/* let outcome1 = "scissors" > "paper";
+let outcome2 = "paper" > "rock";
+let outcome3 = "rock" > "scissors";
+let outcome4 = (hand1 == hand2);
+let hand1 = ('rock'|| 'paper'|| 'scissors') */
 
 function game(hand1, hand2){
-  let outcome1 = "scissors" > "paper";
-  let outcome2 = "paper" > "rock";
-  /* let outcome3 = "rock" > "scissors"; */
-  let outcome6 = "rock" > "scissors";
-  let outcome4 = (hand1 == hand2);
-  if (hand1 > hand2){
-    return "you lose!"
-  } else if (hand1 < hand2){
-    return "you win!";
+  if ((hand1 == "paper" && hand2 == "rock") || ( hand1 == "rock" && hand2 == "scissors") || ( hand1 == "scissors" && hand2 == "paper")){
+    return "you win!"
+  } else if ((hand2 == "paper" && hand1 == "rock") || ( hand2 == "rock" && hand1 == "scissors") || ( hand2 == "scissors" && hand1 == "paper")){
+    return "you lose!";
   } else if ( hand1 === hand2){
     return "it's a tie";
   }
@@ -249,7 +246,7 @@ Using the miles function below do the following:
 */
 
 function miles(someNum){
-  let convToMiles = someNum * 0.6214;
+  let convToMiles = someNum * 0.621371;
   return convToMiles;
 }
 
