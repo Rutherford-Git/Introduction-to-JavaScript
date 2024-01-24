@@ -20,7 +20,7 @@ Do the following:
    HINT: no function required
 */
 let votingAge = 21
-if ( votingAge >= 18) {
+if (votingAge >= 18) {
   console.log( 'true');
 }
 
@@ -36,20 +36,20 @@ Do the following:
 
    HINT: no function required
 */
-let juice = 3
-let milk = 4
+let a1 = 3
+let a2 = 4
 
-if (juice < milk){
+if (a1 < a2){
+  console.log('true');
+}
+
+a1 = 5
+
+if (a1 < a2){
   console.log( 'true');
 }
 
-juice = 5
-
-if (juice < milk){
-  console.log( 'true');
-}
-
-console.log(juice)
+console.log(a1)
 
 
 /*
@@ -151,15 +151,14 @@ NOTE 2: This is a great time to check the tests to see what it expects, versus w
 
 function hungryDog(weight, age){
   while (age >= 1){
-     if (weight < 5){
+    if (weight < 5){
      let food = weight * 0.05;
      return food;
     }
-     else if (weight <=10){
+    else if (weight <= 10){
       let food = (weight * 0.04);
       return food;
       }
-    
     else if (weight <= 15){
       let food = weight * 0.03;
       return food;
@@ -167,8 +166,8 @@ function hungryDog(weight, age){
     else if (weight > 15){
       let food = weight * 0.02;
       return food;
-      } 
-  } 
+      }
+    }
   
   while (age < 1){ 
     if (age <= 0.33){
